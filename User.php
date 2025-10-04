@@ -10,17 +10,10 @@ class User {
         $this->last_name = $last_name;
     }
 
-    function get_first_name()
+    function __destruct()
     {
-        return $this->first_name;
-    }
-
-    function get_last_name()
-    {
-        return $this->last_name;
+        echo "O primeiro nome do usuário é {$this->first_name} e o sobrenome é {$this->last_name}.";
     }
 }
 
 $userOne = new User("Lucio", "Azevedo");
-echo $userOne->get_first_name();
-echo $userOne->get_last_name();
